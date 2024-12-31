@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Challenge Javascript 4</title>
+</head>
+
+<body>
+    <h1>Challenge Javascript 4</h1>
+    <h2>Visible dans la console</h2>
+
+    <script>
+        //scores équipe D       
+        let scoreD1 = 96;
+        let scoreD2 = 108;
+        let scoreD3 = 89;
+        //scores équipe K
+        let scoreK1 = 88;
+        let scoreK2 = 91;
+        let scoreK3 = 1100;
+        //calculer les moyennes
+        let moyenneD = (scoreD1 + scoreD2 + scoreD3) / 3
+        console.log(moyenneD);
+        let moyenneK = (scoreK1 + scoreK2 + scoreK3) / 3
+        console.log(moyenneK);
+
+        //conditions pour déterminer gagnant
+        //pour gagner il faut avoir une moyenne supérieure à 100
+        //sinon aucun gagnant
+        if (moyenneD > 100 || moyenneK > 100) {
+            console.log("il y a un gagnant");
+            if (moyenneD > moyenneK) {
+                console.log("les D sont meilleurs");
+
+            } else {
+                console.log("les K sont meilleurs");
+            }
+        } else {
+            console.log("personne n'a gagné");
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

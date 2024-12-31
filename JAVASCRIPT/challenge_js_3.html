@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Challenge Javascript 3</title>
+</head>
+
+<body>
+    <h1>Challenge Javascript 3</h1>
+    <h2>Visible dans la console</h2>
+
+
+    <h2>Exercice 1</h2>
+    <script>
+        //IMC = poids / taille² = poids / (taille * taille)
+
+        let tailleBernard = 1.69;
+        let poidsBernard = 78;
+        //calculer IMC
+        let imcBernard = poidsBernard / (tailleBernard ** 2);
+        console.log(imcBernard);
+
+        let tailleMarcel = 1.95;
+        let poidsMarcel = 92;
+        //calculer IMC
+        let imcMarcel = poidsMarcel / (tailleMarcel ** 2);
+        console.log(imcMarcel);
+
+
+        //booléen pour déterminer quel IMC est supérieur
+        if (imcBernard < imcMarcel) {
+            let bernardHigherIMC = false;
+            console.log(bernardHigherIMC);
+        } else {
+            bernardHigherIMC = true;
+            console.log(bernardHigherIMC);
+        }
+
+    </script>
+    <h2>Exercice 2</h2>
+    <script>
+        //améliorer l'excercice précédent
+        //en affichant du texte dans la console
+        if (imcBernard < imcMarcel) {
+            let bernardHigherIMC = false;
+            console.log("l'imc de Bernard vaut " + imcBernard + " et est inférieur à celui de Marcel qui vaut " + imcMarcel);
+        } else {
+            bernardHigherIMC = true;
+            console.log("l'imc de Marcel  vaut " + imcMarcel + " et est inférieur à celui de Bernard qui  vaut " + imcBernard);
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

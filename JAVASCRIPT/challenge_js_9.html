@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Challenge Javascript 9</title>
+</head>
+
+<body>
+    <h1>Challenge Javascript 9</h1>
+    <h2>Visible dans la console</h2>
+
+
+    <script>
+        //ENONCE - EXERCICE 1
+        // EX 01 -  Use a loop to remove the 'X' and use console.log to reveal the message 
+        const hiddenMessage = ["X", "X", "X", "X", "W", "X", "E", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X", "X", "X", "X", "X", " ", "X", "X", "X", "X", "X", "X", "X", "X", "D", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "O", "X", "X", "X", "X", "X", "X", "N", "X", "X", "X", "X", "E", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", ",", "X", " ", "X"]
+
+        //SOLUTION POUR AFFICHER LA RESPONSE 
+        //LES LETTRES S'AFFICHENT LES UNES SOUS LES AUTRES
+        console.log("Solution - variante 1");
+        for (let i = 0; i < hiddenMessage.length; i++) {
+            if (hiddenMessage[i] !== "X") {
+                console.log(hiddenMessage[i]);
+            }
+        }
+
+        //SOLUTION POUR AFFICHER LA RESPONSE 
+        //SUR UNE LIGNE
+        //initialiser la variable qui contiendra le message
+        console.log("Solution - variante 2");
+        let message = "";
+        for (let i = 0; i < hiddenMessage.length; i++) {
+            if (hiddenMessage[i] !== "X") {
+                //ajouter chaque lettre différente de X au message
+                message += hiddenMessage[i];
+            }
+        }
+        //afficher la solution sur une ligne
+        console.log(message);
+
+
+        //ENONCE - EXERCICE 2
+        // EX 02 - Remove the 'X' and the even numbers
+        // Hint: As this is a string you should find a way to convert into an array.
+
+        const hiddenCode = "XXXXXXXXXXXXXXXXXXXXXXXXXXXCXXXXXXXOXXXXXDXXXXXXXXXXXXXXXEXXXX XXXXXXXXXXXXXXX:X0XXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX3XXXXXX2XXXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX6XXXXXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX7XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXXXXXXXXX8XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX8XXXXXXXXXXX4XXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXX9XXXX9XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXX4XXXXXXXXXXX6XXXXXXXXX2XXXXXXXX3XXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXX";
+
+        // Transformer la chaîne en tableau
+        //avec la méthode split()
+        //chaque lettre est entourée par ""
+        const hiddenCodeArray = hiddenCode.split("");
+
+        // initiliser un tableau  vide
+        //servira à stocker les lettres valides
+        let resultArray = [];
+
+        // Parcourir le tableau avec la boucle for
+        for (let i = 0; i < hiddenCodeArray.length; i++) {
+
+            //stocker la lettre courante dans une constante
+            //hiddenCodeArray[i] donne la lettre à la position i
+            const currentLetter = hiddenCodeArray[i];
+
+            //vérifications
+            // Vérifier que ce n'est pas "X", que c'est une lettre, et que l'index est impair
+            if (currentLetter !== "X" && /^[a-zA-Z]$/.test(currentLetter) && i % 2 !== 0) {
+
+                //la partie currentLetter !=="X" vérifie que ce n'est pas "X"
+
+                //en ce qui concerne la partie /^[a-zA-Z]$/.test(currentLetter) 
+
+                //la partie /^[a-zA-Z]$/ est une expression régulière
+                //qui vérifie que la chaîne est composée de lettres majuscules ou minuscules
+                //commencer par ^indique que la correspondance doit commencer en début de chaîne
+                //le $ indique que la correspondance se termine en fin de la chaîne
+                //ainsi ^et $ indiquent que la chaîne entière correspond exactement à une 
+                //lettre, sans caractères supplémentaires
+
+                //la partie .test(currentLetter) retourne true si currentLetter est bien une lettre
+                //test() est une fonction native de javascript
+                //elle est définie sur les objets de type RegExp (expression régulière)
+
+                //la partie i % 2 !== 0 vérifie que l'index est impair
+                //i % 2 calcule le reste de la division de i par 2
+                //si le reste est différent de 0, donc !==0
+                //l'index est impair
+
+                //si les conditions sont remplies
+                //on ajoute le caractère courant au tableau resultArray
+                //grâce à la fonction push()
+                //push() ajouter un élément à la fin du tableau
+                resultArray.push(currentLetter);
+            }
+        }
+
+
+        // Afficher les résultats sous forme de tableau
+        console.log("Tableau des lettres valides :", resultArray);
+        //Afficher en utilisant la fonction join() pour obtenir une string
+        //join() est une fonction native de javascript
+        //elle permet de transformer un tableau en chaîne de caractères
+        //en utilsant un séparateur spécifié
+        //si aucun séparateur n'est précisé, les éléments seront collés les uns aux autres
+        console.log("Lettres valides, affichage sous forme de string :", resultArray.join(""));
+
+    </script>
+
+
+</body>
+
+</html>

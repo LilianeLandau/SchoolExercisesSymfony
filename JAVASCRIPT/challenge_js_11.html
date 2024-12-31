@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Challenge Javascript 11</title>
+</head>
+
+<body>
+    <h1>Challenge Javascript 11</h1>
+    <h2>Visible dans la console</h2>
+
+    <h3>Calcul d'IMC de Bernard et Marcel</h3>
+    <p>Rappel formule : IMC = poids / taille² = poids / (taille * taille) </p>
+    <ol>
+        <li>Pour chacun, créer un objet avec des propriétés pour leurs prénom, poids et taille.</li>
+        <li>Créer une méthode ‘calcBMI’ dans chacun des objets permettant de calculer l’IMC. Stockez la valeur calculée
+            dans une propriété de l’objet et aussi la retourner dans la méthode.</li>
+        <li>Afficher dans la console qui a l’IMC le plus élevé de cette manière : “L’IMC de Bernard (20,2) est plus
+            élevé que celui de Marcel (19,3)”</li>
+    </ol>
+    <p>Données 1 : Bernard pèse 78kg et mesure 1,69m. Marcel pèse 92kg et mesure 1,95m.</p>
+    <p>Données 2 : Bernard pèse 95kg et mesure 1,88m. Marcel pèse 85kg et mesure 1,76m.</p>
+
+    <script>
+        console.log("VARIANTE A - les données de chaque objet sont déclarées")
+        //créer l'objet Bernard
+        const Bernard = {
+            name: "Bernard",
+            weight: 78,
+            height: 1.69,
+            calcBMI: function () {
+                //calculer et stocker IMC
+                this.IMC = this.weight / (this.height ** 2);
+                //retourner la valeur de IMC
+                return this.IMC;
+            }
+        };
+
+        //créer l'objet Marcel
+        const Marcel = {
+            name: "Marcel",
+            weight: 92,
+            height: 1.95,
+            calcBMI: function () {
+                //calculer et stocker IMC
+                this.IMC = this.weight / (this.height ** 2);
+                //retourner la valeur de IMC
+                return this.IMC;
+            }
+        };
+
+        // Calculer les IMC de chaque objet
+        const imcBernard = Bernard.calcBMI();
+        const imcMarcel = Marcel.calcBMI();
+
+        // Comparer les IMC des objets et afficher les résultats
+        if (imcBernard > imcMarcel) {
+            console.log(`L’IMC de ${Bernard.name} (${imcBernard.toFixed(2)}) est plus élevé que celui de ${Marcel.name} (${imcMarcel.toFixed(2)})`);
+        } else if (imcMarcel > imcBernard) {
+            console.log(`L’IMC de ${Marcel.name} (${imcMarcel.toFixed(2)}) est plus élevé que celui de ${Bernard.name} (${imcBernard.toFixed(2)})`);
+        } else {
+            console.log(`L’IMC de ${Bernard.name} (${imcBernard.toFixed(2)}) est égal à celui de ${Marcel.name} (${imcMarcel.toFixed(2)})`);
+        }
+
+    </script>
+
+    <script>
+        console.log("VARIANTE B - les données de chaque objet ne sont pas déclarées")
+        // Objet de base pour une personne
+        //toutes les propriétés sont vides
+        const Person = {
+            name: "",
+            weight: 0,
+            height: 0,
+            IMC: 0,
+            // Méthode pour initialiser les données de l'objet
+            setData: function (name, weight, height) {
+                this.name = name;
+                this.weight = weight;
+                this.height = height;
+            },
+
+            calcBMI: function () {
+                //calculer et stocker IMC
+                this.IMC = this.weight / (this.height ** 2);
+                // Retourner IMC
+                return this.IMC;
+            }
+
+        };
+
+        // Créer objets Bernard1 et Marcel1
+        const Bernard1 = Object.create(Person);
+        const Marcel1 = Object.create(Person);
+
+
+        // Initialisation des données pour chaque objet 
+        Bernard1.setData("Bernard", 95, 1.88);
+        Marcel1.setData("Marcel", 85, 1.76);
+
+        // Calcul IMC
+        const imcBernard1 = Bernard1.calcBMI();
+        const imcMarcel1 = Marcel1.calcBMI();
+
+        // Afficher résultats
+        if (imcBernard1 > imcMarcel1) {
+            console.log(`L’IMC de ${Bernard1.name} (${imcBernard1.toFixed(1)}) est plus élevé que celui de ${Marcel1.name} (${imcMarcel1.toFixed(2)})`);
+        } else if (imcMarcel1 > imcBernard1) {
+            console.log(`L’IMC de ${Marcel1.name} (${imcMarcel1.toFixed(1)}) est plus élevé que celui de ${Bernard1.name} (${imcBernard1.toFixed(2)})`);
+        } else {
+            console.log(`L’IMC de ${Bernard1.name} (${imcBernard1.toFixed(1)}) est égal à celui de ${Marcel1.name} (${imcMarcel1.toFixed(2)})`);
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

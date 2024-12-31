@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+PUBLIC "-//W3C//DTD SVG 1.1//EN"
+       "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="57 -12 771 138" width="714px" height="150px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <rect width="161" height="20" x="329" y="5" style="fill:#007;stroke:black;"/>
+   <text width="161" height="20" x="334" y="19" style="fill:#fff;" font-family="Arial" font-size="16px"> contient</text>
+   <rect width="161" height="20" x="329" y="25" style="fill:#aea;stroke:black;"/>
+   <text width="161" height="20" x="334" y="39" style="fill:black;" font-family="Arial" font-size="16px">idPotion</text>
+   <rect width="161" height="20" x="329" y="45" style="fill:#aea;stroke:black;"/>
+   <text width="161" height="20" x="334" y="59" style="fill:black;" font-family="Arial" font-size="16px">idIngredient</text>
+   <rect width="161" height="20" x="329" y="65" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="334" y="79" style="fill:black;" font-family="Arial" font-size="16px">quantite</text>
+   <rect width="161" height="20" x="595" y="3" style="fill:#007;stroke:black;"/>
+   <text width="161" height="20" x="600" y="17" style="fill:#fff;" font-family="Arial" font-size="16px"> ingredient</text>
+   <rect width="161" height="20" x="595" y="23" style="fill:#aea;stroke:black;"/>
+   <text width="161" height="20" x="600" y="37" style="fill:black;" font-family="Arial" font-size="16px">idIngredient</text>
+   <rect width="161" height="20" x="595" y="43" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="600" y="57" style="fill:black;" font-family="Arial" font-size="16px">nomIngredient</text>
+   <rect width="161" height="20" x="595" y="63" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="600" y="77" style="fill:black;" font-family="Arial" font-size="16px">fournisseurIngredient</text>
+   <rect width="161" height="20" x="72" y="3" style="fill:#007;stroke:black;"/>
+   <text width="161" height="20" x="77" y="17" style="fill:#fff;" font-family="Arial" font-size="16px"> potion</text>
+   <rect width="161" height="20" x="72" y="23" style="fill:#aea;stroke:black;"/>
+   <text width="161" height="20" x="77" y="37" style="fill:black;" font-family="Arial" font-size="16px">idPotion</text>
+   <rect width="161" height="20" x="72" y="43" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="77" y="57" style="fill:black;" font-family="Arial" font-size="16px">nomPotion</text>
+   <rect width="161" height="20" x="72" y="63" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="77" y="77" style="fill:black;" font-family="Arial" font-size="16px">descriptionPotion</text>
+   <rect width="161" height="20" x="72" y="83" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="77" y="97" style="fill:black;" font-family="Arial" font-size="16px">effetPotion</text>
+   <rect width="161" height="20" x="72" y="103" style="fill:none;stroke:black;"/>
+   <text width="161" height="20" x="77" y="117" style="fill:black;" font-family="Arial" font-size="16px">difficultePotion</text>
+</svg>

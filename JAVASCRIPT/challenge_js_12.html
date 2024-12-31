@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Challenge Javascript 12</title>
+</head>
+
+<body>
+    <h1>Challenge Javascript 12</h1>
+    <h2>Visible dans la console</h2>
+
+    <p>Un tableau contient les températures maximum des prochains jours
+        en entrée du programme. </p>
+    <p>Pour chaque température ex [17, 21], afficher dans la console
+        “17 degrés dans 1 jour”, “21 degrés dans 2 jours”.</p>
+
+    <p>Données de test : [17, 21, 23] et [12, 5, -5, 0, 4] </p>
+
+    <script>
+
+        //stocker les données de chaque tableau dans une constante
+        const TEMPA = [17, 21, 23];
+        const TEMPB = [12, 5, -5, 0, 4];
+
+        console.log("AFFICHER LES DONNEES DU 1ER TABLEAU");
+        //boucle for pour parcourir TEMPA
+        for (let i = 0; i < TEMPA.length; i++) {
+            //afficher
+            console.log(`Dans  ${i + 1} jour,  il fait ${TEMPA[i]} degrés`);
+        }
+
+        console.log("AFFICHER LES DONNEES DU 2EME TABLEAU");
+        //boucle for pour parcourir TEMPB
+        for (let i = 0; i < TEMPB.length; i++) {
+            //afficher
+            console.log(`Dans  ${i + 1} jour,  il fait ${TEMPB[i]} degrés`);
+        }
+
+        console.log("VARIANTE - UTILISER UNE FONCTION POUR AFFICHER");
+        function afficherJouretTemp(tempArray, nomTab) {
+            console.log(`Afficher les données du tableau ${nomTab} avec une fonction`);
+            for (let i = 0; i < tempArray.length; i++) {
+                //afficher
+                console.log(`Dans  ${i + 1} jour,  il fait ${tempArray[i]} degrés`);
+            }
+        }
+        //appel de la fonction
+        afficherJouretTemp(TEMPA, "TEMPA");
+        afficherJouretTemp(TEMPB, "TEMPB");
+
+    </script>
+
+
+
+
+</body>
+
+</html>
